@@ -16,8 +16,8 @@ const QuestionsList = () => {
                 {question.option.map((options) => {
                   return (
                     <>
-                      <input name={question.id} id={options.label} type='radio' className='option' key={options.opt} onClick={() => setTotalPoints((prev) => prev + options.value)} />
-                      <label className='label' for={options.label}>{options.label}</label>
+                      <input name={'question'+question.id} id={String(question.id)+String(options.opt)} type='radio' className='option' key={options.opt} onClick={() => setTotalPoints((prev) => prev + options.value)} />
+                      <label className='label' htmlFor={String(question.id)+String(options.opt)}>{options.label}</label>
                     </>
                   );
                 })}
