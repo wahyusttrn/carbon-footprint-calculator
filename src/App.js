@@ -4,6 +4,7 @@ import Result from './pages/Result'
 import { QuestionContext } from './context/questionContext'
 import { useMemo, useState } from 'react'
 import './App.css'
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [totalPoints, setTotalPoints] = useState(0);
@@ -17,6 +18,7 @@ const App = () => {
             <Route path='/result' element={<Result />} />
         </Routes>
       </Router>
+      <Analytics />
     </QuestionContext.Provider>
   )
 }
