@@ -15,10 +15,10 @@ const QuestionsList = () => {
               <div className="options-wrapper">
                 {question.option.map((options) => {
                   return (
-                    <button className='option' key={options.opt} onClick={() => setTotalPoints((prev) => prev + options.value)}>
-                      {options.label}
-                    </button>
-                    
+                    <>
+                      <input name={question.id} id={options.label} type='radio' className='option' key={options.opt} onClick={() => setTotalPoints((prev) => prev + options.value)} />
+                      <label className='label' for={options.label}>{options.label}</label>
+                    </>
                   );
                 })}
               </div>
