@@ -1,8 +1,8 @@
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
-import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator} from "@chatscope/chat-ui-kit-react"
+import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react"
 import { useState } from 'react';
 
-const API_KEY = "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" // please don't use mine :(
+const API_KEY = "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"
 
 const ChatBot = () => {
   const [typing, setTyping] = useState(false)
