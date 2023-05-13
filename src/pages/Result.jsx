@@ -40,7 +40,7 @@ const Result = () => {
         <h1>{getFinalResult()}</h1>
         <p className='description'>{getDesc()}</p>
       </div>
-      {/* <ChatBot /> */}
+      <ChatBot />
     </div>
   )
 }
