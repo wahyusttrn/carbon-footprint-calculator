@@ -1,0 +1,23 @@
+.Home {
+  margin: 30px 20px 50px 20px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+p {
+  font-weight: 200;
+  font-size: 13;
+}
+.Home header {
+  margin: 0 0 40px 0;
+}
+.check-button {
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-weight: 500;
+}

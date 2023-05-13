@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Result from './pages/Result'
+import { QuestionContext } from './context/questionContext'
+import { useMemo, useState } from 'react'
+import './App.css'
 
-function App() {
+const App = () => {
+  const [totalPoints, setTotalPoints] = useState(0);
+  const providerTotalPoints = useMemo(() => ({totalPoints, setTotalPoints}), [totalPoints, setTotalPoints])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <QuestionContext.Provider value={providerTotalPoints}>
+      <Router>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/result' element={<Result />} />
+        </Routes>
+      </Router>
+    </QuestionContext.Provider>
+  )
 }
 
-export default App;
+export default App

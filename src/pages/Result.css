@@ -1,0 +1,28 @@
+.Result {
+  margin: 10px 20px 50px 20px;
+}
+h1 {
+  font-size: 106px;
+  text-align: center;
+}
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+p {
+  font-weight: 200;
+  font-size: 13;
+}
+.back-button {
+  font-weight: 400;
+  font-size: 24px;
+  background-color: #ffffff;
+  width: 5px;
+  height: 5px;
+  border: none;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+.result-wrapper {
+  margin-bottom: 30px;
+}
